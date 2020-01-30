@@ -129,7 +129,6 @@
                             ctx.stroke()
                             ctx.fillText(currentRowParsedData[0]['Q3'], (percentagesOfRanges['Q3'] * canvas.width), ((row - 1) * totalHeight) + textTopOffset); //fix text heights
                             ctx.fillText(currentRowParsedData[0]['maximum'], (percentagesOfRanges['maximum'] * canvas.width) - ctx.measureText(currentRowParsedData[0]['maximum']).width, ((row - 1) * totalHeight) + textTopOffset);
-
                             ctx.fillText(currentRowParsedData[0]['title'], 0, ((row - 1) * totalHeight) + spacingData[3]);
                         } else {
                             ctx.fillStyle = colorScheme[1];
