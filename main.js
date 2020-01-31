@@ -50,7 +50,6 @@ window.onload = function() {
         ctx.fillStyle = colorScheme[0];
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.lineWidth = canvas.width / 2000;
         textBoxData = document.getElementById('mainTextarea').value.split('\n');
         textBoxDataParsed = [];
         scale = (canvas.height / textBoxData.length) / Array_Sum(spacingDataOriginal);
@@ -67,10 +66,12 @@ window.onload = function() {
         totalHeight = Array_Sum(spacingData);
         for (row = 1; row <= textBoxData.length; row++) {
             ctx.strokeStyle = colorScheme[1]
+            ctx.lineWidth = canvas.width / 500;
             ctx.beginPath();
             ctx.moveTo(0, (row * totalHeight));
             ctx.lineTo(canvas.width, (row * totalHeight));
             ctx.stroke();
+            ctx.lineWidth = canvas.width / 2000;
             currentRowParsedData = dataLine2JSON(textBoxData[row - 1]);
             ctx.font = String(spacingData[3]) + 'px ' + String(document.getElementById('mainDropdown').value);
             if (parseInt(currentRowParsedData[1]) === 1) {
