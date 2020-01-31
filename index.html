@@ -11,16 +11,19 @@
         <script src = './main.js'></script>
         <style>
             @font-face{font-family:__local__courier__new;src:url('./courier-new.ttf');}
-            body{margin:0;padding:0;background-color:white;overflow:hidden;}
-            #mainTextarea{background-color:#d4d3cf;color:black;border:0;width:100vw;height:15vh;display:inline-block;resize:none;}
+            @font-face{font-family:__local__consolas;src:url('./consolas.ttf');}
+            @font-face{font-family:__local__roboto__light;src:url('./roboto-light.ttf');}
+            @font-face{font-family:__local__roboto__medium;src:url('./roboto-medium.ttf');}
+            body{margin:0;padding:0;background-color:#d4d3cf;overflow:hidden;}
+            #mainTextarea{background-color:#d4d3cf;color:black;border:0;width:100vw;height:15vh;display:inline-block;resize:none;padding:0;margin:0;}
             #mainTextarea::-webkit-input-placeholder{color:#474747;}
             #mainTextarea:-moz-placeholder{color:#474747;}
             #mainTextarea::-moz-placeholder{color:#474747;}
             #mainTextarea:-ms-input-placeholder{color:#474747;}
             #mainTextarea::placeholder{color:#474747;}
-            #mainCanvas{background-color:white;width:100vw;height:80vh;display:inline-block;border:0;}
-            #sliderContainer{background-color:#d4d3cf;width:100vw;height:5vh;border:0;}
-            #mainSlider{width:100vw;height:5vh;border:0;display:inline-block;}
+            #mainCanvas{background-color:white;width:100vw;height:80vh;display:inline-block;border:0;padding:0;margin:0;}
+            #mainSlider{width:50vw;height:5vh;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:0px;}
+            #mainDropdown{width:50vw;height:5vh;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:50vw;color:black;background-color:#d4d3cf;}
         </style>
     </head>
     <body>
@@ -30,8 +33,12 @@
                 Canvas failed to load :(
             </p>
         </canvas>
-        <div id = 'sliderContainer'>
-            <input type = 'range' min = '0' max = '100' value = '33' id = 'mainSlider' title = 'Max Scale Adjuster'/>
-        </div>
+        <input type = 'range' min = '0' max = '100' value = '33' id = 'mainSlider' title = 'Max Scale Adjuster'/>
+        <select id = 'mainDropdown' title = 'Output font selector'>
+            <option value = '__local__roboto__medium'>Roboto Medium</option>
+            <option value = '__local__roboto__light'>Roboto Light</option>
+            <option value = '__local__courier__new'>Courier New</option>
+            <option value = '__local__consolas'>Consolas</option>
+        </select>
     </body>
 </html>

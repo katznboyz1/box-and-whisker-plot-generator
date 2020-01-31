@@ -72,7 +72,7 @@ window.onload = function() {
             ctx.lineTo(canvas.width, (row * totalHeight));
             ctx.stroke();
             currentRowParsedData = dataLine2JSON(textBoxData[row - 1]);
-            ctx.font = String(spacingData[3]) + 'px __local__courier__new';
+            ctx.font = String(spacingData[3]) + 'px ' + String(document.getElementById('mainDropdown').value);
             if (parseInt(currentRowParsedData[1]) === 1) {
                 middlePointForLines = spacingData[0] + (spacingData[2] / 2);
                 maximumRange = currentRowParsedData[0]['maximum'] - currentRowParsedData[0]['minimum'];
