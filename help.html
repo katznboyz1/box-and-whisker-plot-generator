@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title>Help Menu</title>
+        <meta charset = 'utf-8'/>
+        <style>
+            @font-face{font-family:__local__roboto__light;src:url('./roboto-light.ttf');}
+            body{margin:0;padding:0;background-color:white;overflow:hidden;overflow-y:scroll;min-width:900px;min-height:600px;width:100vw;height:100vh;color:black;}
+            .pageTitleText{font-family:__local__roboto__light;font-size:40px;margin:20px;}
+            .sectionTitleText{font-family:__local__roboto__light;font-size:30px;margin:10px;margin-left:20px;margin-top:40px;}
+            .sectionContentText{font-family:__local__roboto__light;font-size:20px;margin:5px;margin-left:20px;margin-right:20px;}
+            .sectionImage{width:80vw;height:auto;margin:0px;margin-left:20px;}
+        </style>
+    </head>
+    <body>
+        <p>
+            <p class = 'pageTitleText' style = 'display:inline-block;'>Box and Whisker Plot Help Menu</p>
+            <a href = './index.html' style = 'font-family:__local__roboto__light;color:gray;display:inline-block;text-decoration:none;'>(home)</a>
+        </p>
+        <p class = 'sectionTitleText'>Error: canvas failing to load:</p>
+        <p class = 'sectionContentText'>This error means that your browser does not support the HTML canvas element. This can be due to the fact that your browser is outdated or needs to update. (If you are on internet explorer, please view the generator on a modern browser like firefox)</p>
+        <p class = 'sectionTitleText'>Error: syntax error on the graph:</p>
+        <p class = 'sectionContentText'>
+            This error means that the way you tried to enter the data for the graph was incorrect. Data should be entered in this format: <code>TITLE:DATA_POINT_1,DATA_POINT_2...</code> Each graph should have its own line in the chart. Empty lines will result in syntax errors. Here is an example of a valid chart data entry:<br><br>
+            <code>
+                Random values on try 0:41,6,58,47,62,56,70,57,38,17<br>
+                Random values on try 1:83,91,14,34,15,95,26,31,72,85<br>
+                Random values on try 2:51,31,88,23,42,85,47,12,70,23<br><br>
+            </code>
+            This will output a chart looking like this:<br><br>
+            <a href = './example-graph-output.png'><img src = './example-graph-output.png' class = 'sectionImage'/></a>
+        </p>
+        <p class = 'sectionTitleText'>How to resize the graph</p>
+        <p class = 'sectionContentText'>On the bottom left of the page, there is a scroll bar. This can be used to adjust the size of the graph.</p>
+        <p class = 'sectionTitleText'>How to set the font</p>
+        <p class = 'sectionContentText'>On the bottom right of the page, there is a dropdown menu. You can select the font from the dropdown there. Unfortunately, the amount of supported fonts for this are limited.</a></p>
+        <p class = 'sectionTitleText'>Was your question not answered here?</p>
+        <p class = 'sectionContentText'>Raise an issue on the <a style = 'color:black;' href = 'https://github.com/katznboyz1/box-and-whisker-plot-generator'>github page!</a></p>
+    </body>
+</html>

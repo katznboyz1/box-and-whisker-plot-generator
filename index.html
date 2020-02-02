@@ -22,8 +22,9 @@
             #mainTextarea:-ms-input-placeholder{color:#474747;}
             #mainTextarea::placeholder{color:#474747;}
             #mainCanvas{background-color:white;width:100%;height:80%;display:inline-block;border:0;padding:0;margin:0;}
-            #mainSlider{width:50%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:0px;}
-            #mainDropdown{width:50%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:50%;color:black;background-color:white;}
+            #mainSlider{width:33%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:0px;}
+            #mainHelpButton{width:33%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:33%;font-family:__local__roboto__light;font-size:20px;color:blue;text-align:center;}
+            #mainDropdown{width:33%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:66%;color:black;background-color:white;}
             .bottomElement{min-height:25;}
         </style>
     </head>
@@ -35,6 +36,7 @@
             </p>
         </canvas>
         <input type = 'range' min = '0' max = '100' value = '33' id = 'mainSlider' title = 'Max Scale Adjuster' class = 'bottomElement'/>
+        <a href = './help.html'><p id = 'mainHelpButton' class = 'bottomElement'>Help page</p></a>
         <select id = 'mainDropdown' title = 'Output font selector' class = 'bottomElement'>
             <option value = '__local__roboto__medium'>Roboto Medium</option>
             <option value = '__local__roboto__light'>Roboto Light</option>
