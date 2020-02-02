@@ -14,16 +14,17 @@
             @font-face{font-family:__local__consolas;src:url('./consolas.ttf');}
             @font-face{font-family:__local__roboto__light;src:url('./roboto-light.ttf');}
             @font-face{font-family:__local__roboto__medium;src:url('./roboto-medium.ttf');}
-            body{margin:0;padding:0;background-color:#d4d3cf;overflow:hidden;}
-            #mainTextarea{background-color:#d4d3cf;color:black;border:0;width:100vw;height:15vh;display:inline-block;resize:none;padding:0;margin:0;}
+            body{margin:0;padding:0;background-color:white;overflow:hidden;min-width:900px;min-height:600px;width:100vw;height:100vh;}
+            #mainTextarea{background-color:#d4d3cf;color:black;border:0;width:100vw;height:15%;display:inline-block;resize:none;padding:0;margin:0;}
             #mainTextarea::-webkit-input-placeholder{color:#474747;}
             #mainTextarea:-moz-placeholder{color:#474747;}
             #mainTextarea::-moz-placeholder{color:#474747;}
             #mainTextarea:-ms-input-placeholder{color:#474747;}
             #mainTextarea::placeholder{color:#474747;}
-            #mainCanvas{background-color:white;width:100vw;height:80vh;display:inline-block;border:0;padding:0;margin:0;}
-            #mainSlider{width:50vw;height:5vh;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:0px;}
-            #mainDropdown{width:50vw;height:5vh;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:50vw;color:black;background-color:#d4d3cf;}
+            #mainCanvas{background-color:white;width:100%;height:80%;display:inline-block;border:0;padding:0;margin:0;}
+            #mainSlider{width:50%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:0px;}
+            #mainDropdown{width:50%;height:5%;border:0;margin:0;padding:0;position:absolute;bottom:0px;left:50%;color:black;background-color:white;}
+            .bottomElement{min-height:25;}
         </style>
     </head>
     <body>
@@ -33,8 +34,8 @@
                 Canvas failed to load :(
             </p>
         </canvas>
-        <input type = 'range' min = '0' max = '100' value = '33' id = 'mainSlider' title = 'Max Scale Adjuster'/>
-        <select id = 'mainDropdown' title = 'Output font selector'>
+        <input type = 'range' min = '0' max = '100' value = '33' id = 'mainSlider' title = 'Max Scale Adjuster' class = 'bottomElement'/>
+        <select id = 'mainDropdown' title = 'Output font selector' class = 'bottomElement'>
             <option value = '__local__roboto__medium'>Roboto Medium</option>
             <option value = '__local__roboto__light'>Roboto Light</option>
             <option value = '__local__courier__new'>Courier New</option>
